@@ -23,14 +23,18 @@ public class User {
 
 	@Column(name = "EMAIL")
 	private String email;
+	
+	@Column(name = "PASSWARD")
+	private String passward;
 
 	public User() {
 	}
 
-	public User(String firstName, String lastName, String email) {
+	public User(String firstName, String lastName, String email, String passward) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.passward =passward;
 	}
 
 	public Long getId() {
@@ -64,5 +68,14 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	public String getPassward() {
+		return passward;
+	}
+
+	public void setPassward(String passward) {
+		this.passward = passward;
+	}
+	
 
 }

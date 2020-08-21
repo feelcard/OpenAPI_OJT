@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>hiiiiiiiiiiiii</h3>
+	<h3>Test</h3>
+	<form action="/" method="POST">
+		<input type="text" name="email" /> <input type="password"
+			name="password" /> <input type="submit" name="submit" />
+	</form>
 </body>
 </html>

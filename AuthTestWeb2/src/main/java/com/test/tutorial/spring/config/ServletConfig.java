@@ -12,8 +12,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc // xml 파일의 <annotation-driven />
-@ComponentScans(value = {@ComponentScan("com.test.tutorial.spring.config"),@ComponentScan("com.test.tutorial.spring.controller")})
-public class ServletConfig  extends WebMvcConfigurerAdapter{
+@ComponentScan("com.test.tutorial.spring")
+//basic package root 에서 한번에 Scan하도록 설정
+public class ServletConfig extends WebMvcConfigurerAdapter{
 	 @Override
 	    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 	        configurer.enable();

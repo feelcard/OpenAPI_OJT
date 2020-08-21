@@ -24,10 +24,10 @@ public class MainApp {
 		UserService userService = context.getBean(UserService.class);
 
 		// Add Users
-		userService.add(new User("Sunil", "Bora", "suni.bora@example.com"));
-		userService.add(new User("David", "Miller", "david.miller@example.com"));
-		userService.add(new User("Sameer", "Singh", "sameer.singh@example.com"));
-		userService.add(new User("Paul", "Smith", "paul.smith@example.com"));
+		userService.add(new User("Sunil", "Bora", "suni.bora@example.com","1234"));
+		userService.add(new User("David", "Miller", "david.miller@example.com","1234"));
+		userService.add(new User("Sameer", "Singh", "sameer.singh@example.com","1234"));
+		userService.add(new User("Paul", "Smith", "paul.smith@example.com","1234"));
 
 		// Get Users
 		List<User> users = userService.listUsers();
