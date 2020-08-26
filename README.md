@@ -1,33 +1,19 @@
 # Open_API OJT
 
-## Stack
-
-> 
+> 주제 : 포럼 게시판을 서비스하는 어드민 사이트 개발 사용 기술
 >
-> Spring4.0
+>  2.1) 언어 : Java  
 >
-> > eclipce 에서 Marketplace에서 STS v4.7.1 설치 후
-> >
-> > Dynamic web project 생성 그 다음 maven 과 spring Nature를 추가하여 생성
-> >
-> > view는 JSP로 구현
-> >
-> > lib 
-> >
-> > > Spring Security 
-> > >
-> > > Spring Data JPA
-> >
-> > 
+> 2.2) DB : MySQL 
 >
-> webserver 
+> 2.3) 백엔드 프레임워크 : Spring4, Hibernate
 >
-> > tomcat 9.0
+>  2.4) 프론트엔드 : Thymeleaf 주요 구현 목표
 >
-> DB
+>  3.1) Spring Security를 사용한 사용자/그룹/권한/화면 관리 기능을 개발
 >
-> > mysql
+>  3.2) Thymeleaf를 이용한 화면 개발 
 >
-> 
+> 3.3) JUnit5를 이용한 테스트 코드 작성 3.4) DB 설계 / ERD 작성 및 프로젝트 설계/일정 산정 경험
 
 ※ TIL 폴더에 프로젝트를 진행하면 공부했던 내용을 정리할 예정입니다.
