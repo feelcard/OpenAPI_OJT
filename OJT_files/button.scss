@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/**
+ * author : Sung-Jin Jang, niconi@adain.kr
+ * date : 2016. 8. 1.
+ * description : button SCSS
+**/
+/**
+ * author : Sung-Jin Jang, niconi@adain.kr
+ * date : 2016. 7. 4.
+ * description : variables SCSS
+**/
+/* welcome page default */
+/* chart colors */
+/**
+ * author : 임채주, shine5311@adain.kr
+ * date : 2016. 8. 1.
+ * description : _mixin SCSS
+**/
+/*
+===============================================================================
+ * responsive mediaquery
+===============================================================================
+*/
+/*
+===============================================================================
+ * border radius
+===============================================================================
+*/
+/*
+===============================================================================
+ * box shadow
+===============================================================================
+*/
+/*
+===============================================================================
+ * grid
+===============================================================================
+*/
+[class*="col-"] {
+  margin-bottom: 20px;
+  text-align: center;
+  box-sizing: border-box; }
+
+@media all and (max-width: 768px) {
+  .no-mobile {
+    display: none; } }
+
+@media all and (min-width: 768px) {
+  .row {
+    display: flex; }
+  [class*="col-"] {
+    margin-right: 20px; }
+    [class*="col-"]:last-child {
+      margin-right: 0; }
+  .col-1 {
+    flex: 1; }
+  .col-2 {
+    flex: 2; }
+  .col-3 {
+    flex: 3; }
+  .col-4 {
+    flex: 4; }
+  .col-5 {
+    flex: 5; }
+  .col-6 {
+    flex: 6; }
+  .col-7 {
+    flex: 7; }
+  .col-8 {
+    flex: 8; }
+  .col-9 {
+    flex: 9; }
+  .col-10 {
+    flex: 10; }
+  .col-11 {
+    flex: 11; }
+  .col-12 {
+    flex: 12; }
+  .full-width {
+    margin-bottom: 20px;
+    margin-right: 0; }
+  .space-off {
+    margin-bottom: 0; }
+    .space-off:last-child {
+      margin-bottom: 0; } }
+
+.hidden-col {
+  visibility: hidden; }
+
+.full-width {
+  margin-bottom: 20px; }
+
+.space-off {
+  margin-bottom: 0; }
+  .space-off:last-child {
+    margin-bottom: 0; }
+
+.group-btns {
+  display: inline-block;
+  margin: 2px;
+  vertical-align: middle; }
+  .group-btns .button {
+    margin: 0; }
+
+/* Common button styles */
+.button {
+  display: inline-block;
+  min-width: 30px;
+  min-height: 30px;
+  margin: 2px;
+  border: none;
+  background: none;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1; }
+
+.button:focus {
+  outline: none; }
+
+.button > span {
+  vertical-align: middle; }
+
+/* Sizes */
+.button-size-s {
+  font-size: 14px; }
+
+.button-size-m {
+  font-size: 16px; }
+
+.button-size-l {
+  font-size: 18px; }
+
+/* Typography and Roundedness */
+.button-text-upper {
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+.button-text-thin {
+  font-weight: 300; }
+
+.button-text-medium {
+  font-weight: 500; }
+
+.button-text-thick {
+  font-weight: 600; }
+
+.button-round-s {
+  border-radius: 5px; }
+
+.button-round-m {
+  border-radius: 15px; }
+
+.button-round-l {
+  border-radius: 40px; }
+
+/* Borders */
+.button-border-thin {
+  border: 1px solid; }
+
+.button-border-medium {
+  border: 2px solid; }
+
+.button-border-thick {
+  border: 3px solid; }
+
+/* Aylen */
+.button.button-aylen {
+  overflow: hidden;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s; }
+
+.button-aylen.button-inverted {
+  background: none;
+  color: #fff; }
+
+.button-aylen::before,
+.button-aylen::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
+
+.button-aylen:hover::before,
+.button-aylen:hover::after {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0); }
+
+.button-aylen:hover::after {
+  -webkit-transition-delay: 0.175s;
+  transition-delay: 0.175s; }
+
+.icon-button {
+  display: inline-block;
+  min-width: 30px;
+  line-height: 22px;
+  padding: 4px;
+  margin: 2px;
+  border: none;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  vertical-align: middle;
+  border-radius: 3px;
+  box-sizing: border-box !important; }
+  .icon-button * {
+    vertical-align: middle; }
+  .icon-button i {
+    margin-top: -4px;
+    font-size: 20px;
+    opacity: 0.8; }
+  .icon-button:hover, .icon-button.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1); }
+  .icon-button.disabled {
+    pointer-events: none;
+    background-color: transparent !important;
+    box-shadow: none;
+    color: #777 !important;
+    cursor: default; }
+
+.button.button-aylen {
+  background: #fff;
+  color: white; }
+
+.button-aylen.button-inverted {
+  background: none;
+  color: #fff; }
+
+.button-aylen::before {
+  background: #e7f9f7; }
+
+.button-aylen::after {
+  background: #58a79f; }
+
+.button-aylen:hover {
+  color: #fff; }
+
+.button-aylen.active {
+  background: #58a79f;
+  color: #fff; }

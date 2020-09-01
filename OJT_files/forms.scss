@@ -1,0 +1,270 @@
+@charset "UTF-8";
+/**
+ * author : Sung-Jin Jang, niconi@adain.kr
+ * date : 2016. 7. 2.
+ * description : Forms SCSS
+**/
+/**
+ * author : Sung-Jin Jang, niconi@adain.kr
+ * date : 2016. 7. 4.
+ * description : variables SCSS
+**/
+/* welcome page default */
+/* chart colors */
+/**
+ * author : 임채주, shine5311@adain.kr
+ * date : 2016. 8. 1.
+ * description : _mixin SCSS
+**/
+/*
+===============================================================================
+ * responsive mediaquery
+===============================================================================
+*/
+/*
+===============================================================================
+ * border radius
+===============================================================================
+*/
+/*
+===============================================================================
+ * box shadow
+===============================================================================
+*/
+/*
+===============================================================================
+ * grid
+===============================================================================
+*/
+@import url("https://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+[class*="col-"] {
+  margin-bottom: 20px;
+  text-align: center;
+  box-sizing: border-box; }
+
+@media all and (max-width: 768px) {
+  .no-mobile {
+    display: none; } }
+
+@media all and (min-width: 768px) {
+  .row {
+    display: flex; }
+  [class*="col-"] {
+    margin-right: 20px; }
+    [class*="col-"]:last-child {
+      margin-right: 0; }
+  .col-1 {
+    flex: 1; }
+  .col-2 {
+    flex: 2; }
+  .col-3 {
+    flex: 3; }
+  .col-4 {
+    flex: 4; }
+  .col-5 {
+    flex: 5; }
+  .col-6 {
+    flex: 6; }
+  .col-7 {
+    flex: 7; }
+  .col-8 {
+    flex: 8; }
+  .col-9 {
+    flex: 9; }
+  .col-10 {
+    flex: 10; }
+  .col-11 {
+    flex: 11; }
+  .col-12 {
+    flex: 12; }
+  .full-width {
+    margin-bottom: 20px;
+    margin-right: 0; }
+  .space-off {
+    margin-bottom: 0; }
+    .space-off:last-child {
+      margin-bottom: 0; } }
+
+.hidden-col {
+  visibility: hidden; }
+
+.full-width {
+  margin-bottom: 20px; }
+
+.space-off {
+  margin-bottom: 0; }
+  .space-off:last-child {
+    margin-bottom: 0; }
+
+/* form
+   ========================================================================== */
+/* input text */
+.input-box {
+  display: block;
+  width: 100%;
+  padding: 10px 0; }
+  .input-box.team {
+    padding: 0; }
+  @media only screen and (min-width: 768px) {
+    .input-box {
+      display: table;
+      padding: 10px 0; } }
+  .input-box .text-label {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 5px 40px 5px 0;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    vertical-align: middle;
+    box-sizing: border-box; }
+    .input-box .text-label.team {
+      display: none; }
+    .input-box .text-label.thumb {
+      width: 100%;
+      padding: 5px 0 5px 0; }
+    @media only screen and (min-width: 768px) {
+      .input-box .text-label {
+        display: table-cell;
+        width: 34%; }
+        .input-box .text-label.team {
+          display: table-cell; } }
+  .input-box .input-text {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    vertical-align: middle;
+    box-sizing: border-box; }
+    .input-box .input-text.team {
+      height: 120px;
+      padding: 0 8px;
+      overflow-y: auto;
+      border-bottom: none; }
+    .input-box .input-text.member {
+      padding: 8px 50px 8px 8px; }
+    .input-box .input-text.thumb {
+      position: relative;
+      border-bottom: 0;
+      padding: 0; }
+      .input-box .input-text.thumb .nt-thumb-box {
+        width: 100%; }
+        @media only screen and (min-width: 768px) {
+          .input-box .input-text.thumb .nt-thumb-box {
+            max-width: 48%; } }
+        .input-box .input-text.thumb .nt-thumb-box .inputfile + label {
+          padding: 30px 10px 10px;
+          font-size: 12px;
+          text-align: center; }
+          .input-box .input-text.thumb .nt-thumb-box .inputfile + label i {
+            top: 19px;
+            left: 50%;
+            margin-left: -12px; }
+      .input-box .input-text.thumb .td-thumb {
+        width: 100%;
+        margin-bottom: 1px; }
+      .input-box .input-text.thumb img {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top; }
+      .input-box .input-text.thumb .inputfile + label {
+        width: 100%; }
+    @media only screen and (min-width: 768px) {
+      .input-box .input-text {
+        display: table-cell;
+        width: 100%; } }
+  .input-box .input-text-rc {
+    display: block;
+    padding: 8px;
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+    border: none;
+    background-color: transparent;
+    vertical-align: middle; }
+    @media only screen and (min-width: 768px) {
+      .input-box .input-text-rc {
+        display: table-cell;
+        width: 100%; } }
+  .input-box .inblock-box {
+    position: relative;
+    display: inline-block;
+    padding-right: 5px;
+    margin: 0 10px 0 0; }
+  .input-box .checkbox-custom, .input-box .radio-custom {
+    opacity: 0;
+    position: absolute; }
+  .input-box .checkbox-custom, .input-box .checkbox-custom-label, .input-box .radio-custom, .input-box .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    cursor: pointer; }
+  .input-box .checkbox-custom-label, .input-box .radio-custom-label {
+    position: relative;
+    font-size: 1rem; }
+  .input-box .checkbox-custom + .checkbox-custom-label:before, .input-box .radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    padding: 2px;
+    margin-top: -3px;
+    margin-right: 10px;
+    text-align: center; }
+  .input-box .checkbox-custom:checked + .checkbox-custom-label:before {
+    background: #303030;
+    box-shadow: inset 0 0 0 0 #fff; }
+  .input-box .radio-custom + .radio-custom-label:before {
+    border-radius: 50%; }
+  .input-box .radio-custom:checked + .radio-custom-label:before {
+    background: #303030;
+    box-shadow: inset 0 0 0 1px #fff; }
+  .input-box .common-select {
+    display: table-cell;
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    vertical-align: middle; }
+
+/* custom select */
+.select-custom {
+  position: relative; }
+  .select-custom .input-radio-select {
+    position: absolute;
+    top: 0;
+    left: -9999% !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden; }
+    .select-custom .input-radio-select:checked + .input-radio-label {
+      background-color: #3e7951; }
+      .select-custom .input-radio-select:checked + .input-radio-label:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 3px;
+        height: 100%;
+        background-color: #47CF73; }
+  .select-custom .input-radio-label {
+    display: block;
+    padding: 4px 10px; }
+    .select-custom .input-radio-label:hover {
+      background-color: #888; }

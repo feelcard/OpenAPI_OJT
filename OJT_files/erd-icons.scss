@@ -1,0 +1,343 @@
+/**
+ * author : Sung-Jin Jang, niconi@adain.kr
+ * date : 2016. 7. 27.
+ * description : font SCSS
+**/
+/* Material Icons
+   ========================================================================== */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"); }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+/* ERD Icons
+   ========================================================================== */
+@font-face {
+  font-family: 'erdcloud';
+  src: url("/fonts/erdcloud.ttf") format("truetype"), url("/fonts/erdcloud.woff") format("woff"), url("/fonts/erdcloud.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'erdcloud' !important;
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 24px;
+  /* Preferred icon size */
+  vertical-align: middle;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-feature-settings: 'liga';
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+  .icons.gold {
+    color: gold; }
+  .icons.cyan {
+    color: turquoise; }
+
+.admin-pawn:before {
+  content: "\e934"; }
+
+.admin-knight:before {
+  content: "\e935"; }
+
+.admin-bishop:before {
+  content: "\e936"; }
+
+.admin-rook:before {
+  content: "\e937"; }
+
+.admin-queen:before {
+  content: "\e938"; }
+
+.admin-king:before {
+  content: "\e939"; }
+
+.erd-email:before {
+  content: "\e933"; }
+
+.erd-gitter:before {
+  content: "\e931"; }
+
+.table-copy:before {
+  content: "\e932"; }
+
+.erd-placement:before {
+  content: "\e930"; }
+
+.erd-arrow-group:before {
+  content: "\e900"; }
+
+.erd-arrow:before {
+  content: "\e901"; }
+
+.erd-database:before {
+  content: "\e964"; }
+
+.erd-flag:before {
+  content: "\e92d"; }
+
+.erd-library:before {
+  content: "\e92e"; }
+
+.erd-goal:before {
+  content: "\e92f"; }
+
+.erd-institution:before {
+  content: "\f19c"; }
+
+.twitter-square:before {
+  content: "\f081"; }
+
+.facebook-square:before {
+  content: "\f082"; }
+
+.sign-out:before {
+  content: "\f08b"; }
+
+.linkedin-square:before {
+  content: "\f08c"; }
+
+.sign-in:before {
+  content: "\f090"; }
+
+.github-square:before {
+  content: "\f092"; }
+
+.pinterest-square:before {
+  content: "\f0d3"; }
+
+.google-plus-square:before {
+  content: "\f0d4"; }
+
+.rss-square:before {
+  content: "\f143"; }
+
+.youtube-square:before {
+  content: "\f166"; }
+
+.instagram-square:before {
+  content: "\f16d"; }
+
+.tumblr-square:before {
+  content: "\f174"; }
+
+.skype-square:before {
+  content: "\f17e"; }
+
+.git-square:before {
+  content: "\f1d2"; }
+
+.cc-visa:before {
+  content: "\f1f0"; }
+
+.cc-mastercard:before {
+  content: "\f1f1"; }
+
+.cc-amex:before {
+  content: "\f1f3"; }
+
+.cc-paypal:before {
+  content: "\f1f4"; }
+
+.erd-safari:before {
+  content: "\f267"; }
+
+.erd-chrome:before {
+  content: "\f268"; }
+
+.erd-firefox:before {
+  content: "\f269"; }
+
+.erd-opera:before {
+  content: "\f26a"; }
+
+.erd-internet-explorer:before {
+  content: "\f26b"; }
+
+.erd-edge:before {
+  content: "\f282"; }
+
+.erd-p-key:before {
+  content: "\e0da"; }
+
+.erd-unlock:before {
+  content: "\e902"; }
+
+.erd-zoom-in:before {
+  content: "\e903"; }
+
+.erd-zoom-out:before {
+  content: "\e904"; }
+
+.erd-table-new:before {
+  content: "\e905"; }
+
+.erd-pathfinder:before {
+  content: "\e906"; }
+
+.erd-pathfinder-1:before {
+  content: "\e907"; }
+
+.erd-pathfinder-2:before {
+  content: "\e908"; }
+
+.erd-pathfinder-3:before {
+  content: "\e909"; }
+
+.erd-pathfinder-4:before {
+  content: "\e90a"; }
+
+.erd-pathfinder-5:before {
+  content: "\e90b"; }
+
+.erd-align-hr:before {
+  content: "\e90c"; }
+
+.erd-align-hc:before {
+  content: "\e90d"; }
+
+.erd-align-hl:before {
+  content: "\e90e"; }
+
+.erd-align-vt:before {
+  content: "\e90f"; }
+
+.erd-align-vc:before {
+  content: "\e910"; }
+
+.erd-import:before {
+  content: "\e911"; }
+
+.erd-export:before {
+  content: "\e912"; }
+
+.erd-undo:before {
+  content: "\e913"; }
+
+.erd-redo:before {
+  content: "\e914"; }
+
+.erd-align-vb:before {
+  content: "\e915"; }
+
+.erd-minimap:before {
+  content: "\e916"; }
+
+.erd-1-only:before {
+  content: "\e917"; }
+
+.erd-1:before {
+  content: "\e918"; }
+
+.erd-N:before {
+  content: "\e919"; }
+
+.erd-1-N:before {
+  content: "\e91a"; }
+
+.erd-0-N:before {
+  content: "\e91b"; }
+
+.erd-0-1:before {
+  content: "\e91c"; }
+
+.erd-box-line:before {
+  content: "\e91d"; }
+
+.erd-cloud:before {
+  content: "\e91e"; }
+
+.erd-lock:before {
+  content: "\e91f"; }
+
+.erd-eraser:before {
+  content: "\e920"; }
+
+.erd-hand-grab:before {
+  content: "\e921"; }
+
+.erd-hand-paper:before {
+  content: "\e922"; }
+
+.erd-k-key:before {
+  content: "\e923"; }
+
+.erd-text:before {
+  content: "\e924"; }
+
+.erd-pencil:before {
+  content: "\e925"; }
+
+.erd-0-1-N:before {
+  content: "\e926"; }
+
+.erd-type:before {
+  content: "\e927"; }
+
+.erd-lnp:before {
+  content: "\e928"; }
+
+.erd-physical:before {
+  content: "\e929"; }
+
+.erd-logical:before {
+  content: "\e92a"; }
+
+.erd-zoom-fit:before {
+  content: "\e92b"; }
+
+.erd-zoom-100:before {
+  content: "\e92c"; }
+
+.erd-enter:before {
+  content: "\ea13"; }
+
+.erd-exit:before {
+  content: "\ea14"; }
+
+.erd-trash:before {
+  content: "\f014"; }
+
+.erd-chat:before {
+  content: "\f0e5"; }
+
+.erd-history:before {
+  content: "\f1da"; }
