@@ -37,7 +37,7 @@ public class CustomPhysicalNamingStrategy implements PhysicalNamingStrategy {
   }
 
   private Identifier convertToSnakeCase(final Identifier identifier) {
-    System.out.println("identifier string in convertToSnakeCase =" + identifier.getText());
+    System.out.println("convertToSnakeCase is run : " + identifier.getText());
     final String regex = "([a-z])([A-Z])";
     final String replacement = "$1_$2";
     final String newName = identifier.getText().replaceAll(regex, replacement).toLowerCase();

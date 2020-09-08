@@ -1,8 +1,11 @@
 package com.hibernate.spring.entity;
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,6 +30,9 @@ public class Subsidiary {
   private String subsiUpdateDate;
   @Column
   private String subsiDelete;
+
+  @OneToMany(mappedBy = "subsi")
+  Set<Member> members = new HashSet<Member>();
 
 
 }

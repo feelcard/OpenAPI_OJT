@@ -1,9 +1,16 @@
 package com.hibernate.spring.entity;
 
 
+import java.util.HashSet;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,4 +35,15 @@ public class Member {
   private String memberUpdateDate;
   @Column
   private String memberDelete;
+
+  @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+  @JoinColumn(name = "auth_code")
+  private Authority auth;
+
+  @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+  @JoinColumn(name = "subsi_id")
+  private Subsidiary subsi;
+
+  @OneToMany(mappedBy = "member")
+  private Set<Reply> replys = new HashSet<Reply>();
 }

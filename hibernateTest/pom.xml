@@ -47,7 +47,18 @@
 			<version>4.3.7.RELEASE</version>
 		</dependency>
 
-
+		<!-- spring-data-jpa -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>2.2.6.RELEASE</version>
+		</dependency>
+		<!-- to use import org.springframework.web.servlet.* -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
 		<!-- Mysql Connector -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -94,6 +105,11 @@
 			<version>1.18.12</version>
 			<scope>provided</scope>
 		</dependency>
-
+		<!-- Apache Commons DBCP -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.1.1</version>
+		</dependency>
 	</dependencies>
 </project>
