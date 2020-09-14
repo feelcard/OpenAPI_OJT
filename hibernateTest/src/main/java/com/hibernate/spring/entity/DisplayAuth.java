@@ -25,6 +25,6 @@ public class DisplayAuth {
   private Display display;
 
   @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-  @JoinColumn(name = "authority_id")
+  @JoinColumn(name = "auth_code")
   private Authority auth;
 }

@@ -128,3 +128,40 @@ https://happyer16.tistory.com/entry/Spring-JPA-%EB%8B%A4%EB%8C%80%EB%8B%A4-%EC%8
 Package 구조 설정
 
 보통은 3depth를 기준으로 com(컴포넌트).기관명.프로젝트이름 이 default 구경태과장님 같은 경우
+
+
+
+
+
+
+
+서버리스 백엔드를 위한 Managed API Gateway ㅤ 
+
+ㅤ→ Cloud Functions, Cloud Run, App Engine 등의 기능을 하나의 관문(Gateway) 으로 관리하여 보안과 유연한 배포및 확장성을 추가한 형태
+
+
+
+> Cloud Functions : 사용한 만큼만 지불하는 확장 가능한 서비스로서의 기능(FaaS)을 통해 서버 관리 없이 코드 실행
+> 코드를 작성하여 배포하면 함수단위로 인스턴스를 생성하여 비즈니스로직을 처리하는 기능(자바 ,파이썬, js 지원)
+> 
+> 
+>
+> cloud Run : 매니지드 컴퓨트 서비스의 하나로, HTTP 요청으로는 기동할 수 있는 스테이트리스 컨테이너를 구동할 수 있다. 또한 구글 쿠버네티스 엔진에서도 이용할 수 있는데, 이를 통해 컨테이너화된 HTTP 워크로드를 매니지드 쿠버네티스 클러스터에서 구동할 수 있다. 
+> 배경지식이 부족하여 간략한 설명이 불가능 하나 이해한 단계로서는 docker와 쿠버네틱스를 융합한 상위 프레임워크 정도로 이해함
+> 
+> 
+>
+> 원문보기:[http://www.ciokorea.com/news/120742#csidx6641eab692b4743b4d6d8b7e09b603f 
+>
+> 
+>
+>  App Engine
+>
+> 아마존의 EC2처럼 IaaS환경에서 App,DB,Webserver,OS,모니터링,로드밸런싱, 업그레이드 등
+> 자원만 빌려주고 모든사항을 관리해야하는 systemAdmin이 필요한  반면 앱 엔진의 경우 애플리케이션(개발 코드) 에 대한 부분만 관리하며 그왜 systemAdmin은 Google이 담당함 다만 EC2보다 비용은 비쌈
+
+
+
+
+
+※스프링 환경설정 구성할 때 항상 패키지 스캔 문장을 넣었는지 확인

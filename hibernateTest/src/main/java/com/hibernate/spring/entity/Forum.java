@@ -3,10 +3,12 @@ package com.hibernate.spring.entity;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import com.hibernate.spring.entity.member.Member;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,15 +31,15 @@ public class Forum {
 
   @ManyToOne
   @JoinColumn(name = "member_id")
-  // ³»°¡ ¿©·¯°³°í ´Ù¸¥´ë»óÀÌ 1°³ (ÀÌ °´Ã¼¸¦ ºÒ·¯¿Ã¶§ Äõ¸®¸¦½ð´Ù)
+  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ (ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½Ã¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
   private Member member;
 
 
 
-  @OneToMany(mappedBy = "forum")
+  @OneToMany(mappedBy = "forum", fetch = FetchType.EAGER)
   private Set<File> files = new HashSet<File>();
 
-  @OneToMany(mappedBy = "forum")
+  @OneToMany(mappedBy = "forum", fetch = FetchType.EAGER)
   private Set<Reply> replys = new HashSet<Reply>();
 
 

@@ -1,6 +1,8 @@
 package com.hibernate.spring;
 
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import com.hibernate.spring.config.HibernateConfig;
 import com.hibernate.spring.entity.display.Display;
@@ -13,6 +15,8 @@ public class MainApp {
   public static void main(String[] args) {
     AnnotationConfigApplicationContext context =
         new AnnotationConfigApplicationContext(HibernateConfig.class);
+    EntityManagerFactory factory = context.getBean(EntityManagerFactory.class);
+    EntityManager manager = factory.createEntityManager();
 
 
     DisplayService displayService = context.getBean(DisplayService.class);

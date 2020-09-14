@@ -1,4 +1,4 @@
-package com.hibernate.spring.entity;
+package com.hibernate.spring.entity.member;
 
 
 import java.util.HashSet;
@@ -11,6 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import com.hibernate.spring.entity.Authority;
+import com.hibernate.spring.entity.Reply;
+import com.hibernate.spring.entity.Subsidiary;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -44,6 +47,6 @@ public class Member {
   @JoinColumn(name = "subsi_id")
   private Subsidiary subsi;
 
-  @OneToMany(mappedBy = "member")
+  @OneToMany(mappedBy = "member", fetch = FetchType.EAGER)
   private Set<Reply> replys = new HashSet<Reply>();
 }

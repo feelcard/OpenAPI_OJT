@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import com.hibernate.spring.entity.DisplayAuth;
@@ -12,7 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity(name = "display")
+@Entity(name = "DISPLAY")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -32,7 +33,7 @@ public class Display {
   private String displayUpdateDate;
   private String displayDelete;
 
-  @OneToMany(mappedBy = "display", cascade = CascadeType.ALL)
+  @OneToMany(mappedBy = "display", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
   private Set<DisplayAuth> displayAuths = new HashSet<>();
 
 
