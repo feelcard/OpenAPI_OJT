@@ -23,6 +23,7 @@ public class WebApplicationInit implements WebApplicationInitializer {
     dispatcher.setLoadOnStartup(1);
     dispatcher.addMapping("/");
 
+
     System.out.println("dispatcher setted");
     // ���ڵ� ���� ����
     FilterRegistration.Dynamic charaterEncodingFilter =

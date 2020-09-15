@@ -29,6 +29,8 @@ public class Member {
   @Column
   private String memberId;
   @Column
+  private String memberPassword;
+  @Column
   private String memberName;
   @Column
   private String memberCreateDate;

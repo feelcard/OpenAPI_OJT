@@ -13,7 +13,7 @@ public class DisplayService {
   DisplayRepository displayRepository;
 
   public void add(Display display) {
-    System.out.println("displayserviceimpl display insert : " + display.toString());
+    System.out.println(" displayserviceimpl display insert : " + display.toString());
     displayRepository.save(display);
 
   }

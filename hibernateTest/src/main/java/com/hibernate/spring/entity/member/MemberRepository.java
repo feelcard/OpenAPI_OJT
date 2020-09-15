@@ -1,12 +1,12 @@
 package com.hibernate.spring.entity.member;
 
-import java.util.List;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MemberRepository extends JpaRepository<Member, String> {
 
-  List<Member> findbyId(String Id);
+  Optional<Member> findByMemberName(String memberName);
 
-  List<Member> findbyName(String Name);
+  Optional<Member> findByMemberId(String memberId);
 
 }

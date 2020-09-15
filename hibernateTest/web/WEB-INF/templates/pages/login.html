@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.w3.org/1999/xhtml" 
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -123,11 +124,11 @@ body {
       <button>create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form> -->
-    <form class="login-form" action="/login ">
+    <form class="login-form" th:action="@{/login}">
       <input type="text" placeholder="email" name="email"/>
       <input type="password" placeholder="password" name="password"/>
       <button>login</button>
-      <p class="message">Not registered? <a href="/registerMove">Create an account</a></p>
+      <p class="message">Not registered? <a href="/signup">Create an account</a></p>
       <p>${plist[0]}</p>
     </form>
   </div>

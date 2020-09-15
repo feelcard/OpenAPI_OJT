@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @PropertySource("classpath:db.properties")
-@EnableTransactionManagement
+@EnableTransactionManagement(proxyTargetClass = true)
 @EnableJpaRepositories(basePackages = {"com.hibernate.spring.entity"})
 @ComponentScan(basePackages = "com.hibernate.spring.*")
 public class HibernateConfig {
