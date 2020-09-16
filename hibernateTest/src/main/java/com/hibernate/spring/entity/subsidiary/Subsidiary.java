@@ -1,7 +1,8 @@
-package com.hibernate.spring.entity;
+package com.hibernate.spring.entity.subsidiary;
 
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -33,7 +34,7 @@ public class Subsidiary {
   @Column
   private String subsiDelete;
 
-  @OneToMany(mappedBy = "subsi", fetch = FetchType.EAGER)
+  @OneToMany(mappedBy = "subsi", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
   Set<Member> members = new HashSet<Member>();
 
 

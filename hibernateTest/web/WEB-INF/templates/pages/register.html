@@ -116,21 +116,26 @@ body {
   </div>
   <div class="form">
 
-   <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
+   <form class="register-form" action="#" th:action="@{/register-processing}" th:object="${member}" method="post">
+      <input type="text" placeholder="name" th:field="*{memberName}"/>
+      <input type="text" th:field="*{memberName}"/>
+      <input type="password" placeholder="password" th:field="*{memberPassword}"/>
+      <input type="text" placeholder="email address" th:field="*{memberEmail}"/>
+      <input type="text" placeholder="name" th:field="*{memberName}"/>
+      <input type="hidden" th:field="*{memberCreateDate}" value = "today()"/>
+      <input type="hidden" th:field="*{memberUpadateDate}" value = "today()"/>
+      <input type="hidden" th:field="*{memberCreateBy}" value = "test"/>
+      <input type="hidden" th:field="*{memberUpdateBy}" value = "test"/>
       <button>create</button>
       <p class="message">Already registered? <a href="/">Sign In</a></p>
     </form> 
-     <!-- <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
-    </form>-->
   </div>
 </div>
 
 </body>
+<script>
+var today = ()=> {
+	return Date.now();
+}
+</script>
 </html>

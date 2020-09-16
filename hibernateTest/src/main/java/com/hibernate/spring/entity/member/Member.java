@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import com.hibernate.spring.entity.Authority;
 import com.hibernate.spring.entity.Reply;
-import com.hibernate.spring.entity.Subsidiary;
+import com.hibernate.spring.entity.subsidiary.Subsidiary;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

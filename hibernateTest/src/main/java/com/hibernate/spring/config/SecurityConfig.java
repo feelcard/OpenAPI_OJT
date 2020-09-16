@@ -11,6 +11,20 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import com.hibernate.spring.service.MemberService;
 
+
+/**
+ * <pre>
+ * 파일명     : SecurityConfig.java
+ * 프로젝트  : hibernateTest
+ * 날짜        : 2020. 9. 16.
+ * ===============================================================================
+ * 			날짜	      		|    	작성자		 	|			내	용		      |	  
+ * ===============================================================================
+ * 	     2020. 9. 16.     	|	       유한솔       	    |    |	
+ * ===============================================================================
+ * 
+ * </pre>
+ */
 @EnableWebSecurity
 @ComponentScan("com.hibernate.spring.*")
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -27,9 +41,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
     // ================login================
-    http.authorizeRequests()// .antMatchers("/page/user_info").access("@authenticationCheckHandler.checkUserId(authentication,#userId)")
-        .antMatchers("/admin", "/user_info").authenticated().antMatchers("/home").permitAll().and()
-        .formLogin() // .hasRole("ANONYMOUS").and().formLogin()
+    http.authorizeRequests().antMatchers("/admin", "/user_info").authenticated()// .antMatchers("/page/user_info").access("@authenticationCheckHandler.checkUserId(authentication,#userId)")
+        .antMatchers("/home").permitAll().and().formLogin() // .hasRole("ANONYMOUS").and().formLogin()
         .loginPage("/login").loginProcessingUrl("/login-processing").defaultSuccessUrl("/")
         .usernameParameter("email").passwordParameter("password").failureUrl("/login")
         // .successHandler(successHandler()).failureHandler(failureHandler())
