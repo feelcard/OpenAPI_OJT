@@ -49,6 +49,7 @@ CREATE TABLE `MEMBER` (
 	`member_create_date`	VARCHAR(30)	NULL,
 	`member_update_date`	VARCHAR(30)	NULL,
 	`member_update_by`	VARCHAR(30)	NULL
+
 );
 
 DROP TABLE IF EXISTS `DISPLAY`;
@@ -256,3 +257,30 @@ ALTER TABLE `FILE` ADD CONSTRAINT `FK_FORUM_TO_FILE_1` FOREIGN KEY (
 REFERENCES `FORUM` (
 	`forum_id`
 );
+
+alter table `member` add `member_password` VARCHAR(255);
+
+insert into authority(auth_code,auth_name,auth_create_by,auth_create_date,auth_update_by,auth_update_date,auth_delete) values("ANONYMOUS","비회원","admin","2020-09-16T09:19:00","admin","2020-09-16T09:19:00","N");
+insert into authority(auth_code,auth_name,auth_create_by,auth_create_date,auth_update_by,auth_update_date,auth_delete) values("USER","회원","admin","2020-09-16T09:19:00","admin","2020-09-16T09:19:00","N");
+
+
+use test;
+
+select * from member;
+alter table `member` add `member_password` VARCHAR(255);
+select * from authority;
+select * from subsidiary;
+insert into authority(auth_code,auth_name,auth_create_by,auth_create_date,auth_update_by,auth_update_date,auth_delete) values("ANONYMOUS","비회원","admin","2020-09-16T09:19:00","admin","2020-09-16T09:19:00","N");
+insert into authority(auth_code,auth_name,auth_create_by,auth_create_date,auth_update_by,auth_update_date,auth_delete) values("USER","회원","admin","2020-09-16T09:19:00","admin","2020-09-16T09:19:00","N");
+delete from subsidiary where subsi_id ='';
+
+INSERT INTO `test`.`subsidiary` (`subsi_id`, `subsi_name`, `subsi_create_date`, `subsi_create_by`, `subsi_update_date`, `subsi_update_by`, `subsi_delete`) 
+VALUES ('0259e849-1dde-45a7-903b-3956f0ce7a46', 'KB생명보험', '122020-09-16T09:19:003', 'admin', '2020-09-16T09:19:00', 'admin', 'N');
+
+
+
+delete from member where auth_code='USER';
+
+# insert into member value("test","test","test","testname","N","2020-09-16",null,null );
+
+alter table member modify column member_password  varchar(255);
